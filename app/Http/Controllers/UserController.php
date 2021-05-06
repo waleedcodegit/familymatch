@@ -85,7 +85,7 @@ class UserController extends Controller
         $p->save();
         $link = 'Your Password Reset Link: '. url('/').'/ForgotPassword/'.Crypt::encrypt($p->token);
         $title = 'Password Reset';
-        $subtile = 'Password Reset Link';
+        $subtile = 'Password Reset Link'; 
         Mail::to($data->email)->send(new Mailer($link,$title,$subtile));
     }
     public function ForgotPassword(Request $request){
