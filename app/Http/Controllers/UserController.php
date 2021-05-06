@@ -83,7 +83,7 @@ class UserController extends Controller
         $p->token = $code;
         $p->status = 1;
         $p->save();
-        $link = 'Your Password Reset Link: http://localhost:8000/ForgotPassword/'.Crypt::encrypt($p->token);
+        $link = 'Your Password Reset Link: '. url('/').'/ForgotPassword/'.Crypt::encrypt($p->token);
         $title = 'Password Reset';
         $subtile = 'Password Reset Link';
         Mail::to($data->email)->send(new Mailer($link,$title,$subtile));
@@ -98,7 +98,7 @@ class UserController extends Controller
             $p->token = $code;
             $p->status = 1;
             $p->save();
-            $link = 'Your Password Reset Link: http://localhost:8000/ForgotPassword/'.Crypt::encrypt($p->token);
+            $link = 'Your Password Reset Link: '. url('/').'/ForgotPassword/'.Crypt::encrypt($p->token);
             $title = 'Password Reset';
             $subtile = 'Password Reset Link';
             Mail::to($request->email)->send(new Mailer($link,$title,$subtile));

@@ -88,14 +88,14 @@ class EmailVerifier extends Component {
                 <div>
                     <AuthNavBar/>
                 </div>
-                <div >
-                    <div className="LoginPageContent">
+                <div className="p-5">
+                    <div className="LoginPageContent   ">
                         <h1 style={{color:'#ffffff'}}>Family Match</h1>
-                    <div className="container logincard">
+                    <div className="container logincard ">
                     <div className="row no-gutter">
                         <div className="d-none d-md-flex col-md-4 col-lg-6 bg-image2"></div>
                         <div className="col-md-8 col-lg-6">
-                        <div className="login d-flex align-items-center py-5">
+                        <div className="login d-flex align-items-center">
                             <div className="container">
                             <div className="row">
                                 <div className="col-md-9 col-lg-8 mx-auto">
@@ -107,7 +107,7 @@ class EmailVerifier extends Component {
                                     :
                                         ''
                                   }  
-                                <h3 className="login-heading2 mb-4" style={{fontWeight:'bold'}}>We Just Sent You a Verification Email</h3>
+                                <h3 className="login-heading2 mb-4 mt-4" style={{fontWeight:'bold'}}>We Just Sent You a Verification Email</h3>
                                 <h3 className="login-heading mb-4">Please Verify Your Email</h3>
                                 <form>
                                     {
